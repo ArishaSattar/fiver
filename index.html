@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiverr Homepage HTML and CSS | CodingNepal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Icons Link -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header or Navbar -->
+    <header class="header">
+        <nav class="navbar max-width">
+            <svg width="89" height="27" viewBox="0 0 89 27" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="#404145"><path d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z"></path></g><g fill="#1dbf73"><path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path></g></svg>
+            <ul class="links">
+                <li><a href="#">Fiverr BusIness</a></li>
+                <li><a href="#">Explore</a></li>
+                <li class="language">
+                    <span class="material-symbols-outlined">language</span>
+                    <a href="#">English</a>
+                </li>
+                <li><a href="#">Become a seller</a></li>
+                <li class="btn signin"><a href="#">Sign In</a></li>
+                <li class="btn join"><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Hero section -->
+    <section class="hero"
+        style="background-image: url(data:image/jpeg;base64,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);">
+        <div class="content max-width">
+            <h2>Find the right freelance service, right away</h2>
+            <div class="search-field">
+                <input type="text" placeholder="Search for any service...">
+                <span class="material-symbols-outlined search-btn">search</span>
+            </div>
+            <div class="popular-tags">
+                Popular:
+                <ul class="link">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">Logo Design</a></li>
+                    <li><a href="#">AI Design</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <h2 class="head">Recently Viewed & More </h2>
+    <div class="slider">
+        <div class="slide">
+            <div class="ima">
+                <img
+                    src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/253008513/original/21a296bb01eee5a7a6defd4c23378f12beeb0671.png">
+                <p>asad rehman</p>
+            </div>
+            <div class="para">
+                <p>i will develop a peremium website with ..</p>
+            </div>
+            <div class="ico"><i class="fa-solid fa-star"></i>
+                <p>5.0</p>
+                <p>from pkr 90176</p>
+
+            </div>
+        </div>
+        <div class="slide">
+            <div class="ima">
+                <img
+                    src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/338439453/original/0a007de0330db2b0f04ce69230ccde6653ec2a29.png">
+                <p>joslahservices</p>
+            </div>
+            <div class="para">
+                <p>i will make a stunning app using bubble..</p>
+            </div>
+            <div class="ico">
+                <p></p>
+                <p>from pkr 90176</p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="ima">
+                <img
+                    src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/29571115/original/7982f83c569750a7d1200647ad65e93db6e9803e.png">
+                <p>bussiness expression</p>
+            </div>
+            <div class="para">
+                <p>i will develop a peremium website with ..</p>
+            </div>
+            <div class="ico"><i class="fa-solid fa-star"></i>
+                <p>5.0</p>
+                <p>from pkr 90176</p>
+
+            </div>
+        </div>
+    
+
+
+    <div class="slide">
+        <div class="ima">
+            <img
+                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/17646559/original/dfdc3e8a867ba876c8f9a520e9578abad8b02d34.png">
+            <p>Aslam baloch</p>
+        </div>
+        <div class="para">
+            <p>i will develop a peremium website with ..</p>
+        </div>
+        <div class="ico"><i class="fa-solid fa-star"></i>
+            <p>5.0</p>
+            <p>from pkr 90176</p>
+    
+        </div>
+    </div>    
+
+    <div class="slide">
+        <div class="ima">
+            <img
+                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/142774291/original/4c2870a5353c3fc6fa09f59f5b84f669666f51a6.jpg">
+
+            <p>Ryana89</p>
+        </div>
+        <div class="para">
+            <p>i will develop a peremium website with ..</p>
+        </div>
+        <div class="ico"><i class="fa-solid fa-star"></i>
+            <p>5.0</p>
+            <p>from pkr 90176</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="ima">
+            <img
+                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/34845690/original/4d75df85b31fc411d6f5df3496d5767f518b43e6.jpg">
+
+            <p>Ramiz raza</p>
+        </div>
+        <div class="para">
+            <p>i will develop a peremium website with ..</p>
+        </div>
+        <div class="ico"><i class="fa-solid fa-star"></i>
+            <p>5.0</p>
+            <p>from pkr 90176</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="ima">
+            <img
+                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/194686472/original/761204b4f96d9730083fc22a3e986579d1bea764.jpg">
+
+            <p>Rayan</p>
+        </div>
+        <div class="para">
+            <p>i will develop a peremium website with ..</p>
+        </div>
+        <div class="ico"><i class="fa-solid fa-star"></i>
+            <p>5.0</p>
+            <p>from pkr 90176</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="ima">
+            <img
+                src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/50236964/original/294bf3b0b991e60902f42153b082e207951442d2.jpg">
+
+            <p>ashmal</p>
+        </div>
+        <div class="para">
+            <p>i will develop a peremium website with ..</p>
+        </div>
+        <div class="ico"><i class="fa-solid fa-star"></i>
+            <p>5.0</p>
+            <p>from pkr 90176</p>
+        </div>
+        </div>
+
+        <div class="slide">
+            <div class="ima">
+                <img
+                    src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/284291257/original/d1ed48e08e81b91e17b94e3c5aba61419dba5e5f.png">
+
+                <p>Asadrehman</p>
+            </div>
+            <div class="para">
+                <p>i will develop a peremium website with ..</p>
+            </div>
+            <div class="ico"><i class="fa-solid fa-star"></i>
+                <p>5.0</p>
+                <p>from pkr 90176</p>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="ima">
+                <img
+                    src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/87115721/original/1c490c784d1c099d6130ecdaaeeb07374176b284.png">
+
+                <p>usman</p>
+            </div>
+            <div class="para">
+                <p>i will develop a peremium website with ..</p>
+            </div>
+            <div class="ico"><i class="fa-solid fa-star"></i>
+                <p>5.0</p>
+                <p>from pkr 90176</p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+        <div class="slider">
+ 
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/translation-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161248/data-entry-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161238/book-covers-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161247/ai-artists-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/logo-design-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161257/wordpress-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161253/voice-over-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161245/animated-explainer-2x.png">
+            <img
+                src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/7ead3b2056987e6fa3aad69cf897a50b-1690383161248/data-entry-2x.png">
+        </div>
+        
+
+
+        <div class="container-3" style="display: flex;">
+            <div class="para">
+                <h2>The best part? Everything.</h2>
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Stick to your budget</h3>
+                <p>Find the right service for every price point. No hourly rates, just project-based pricing.</p>
+
+                <i class="fa-solid fa-circle-check"></i>
+                <h2>Get quality work done quickly</h2>
+                <p>Hand your project over to a talented freelancer in minutes, get long-lasting results.</p>
+                <i class="fa-solid fa-circle-check"></i>
+                <h2>Pay when you're happy</h2>
+                <p>Upfront quotes mean no surprises. Payments only get released when you approve.</p>
+                <i class="fa-solid fa-circle-check"></i>
+                <h2>Count on 24/7 support</h2>
+                <p>Our round-the-clock support team is available to help anytime, anywhere.</p>
+
+            </div>
+
+            <div class="vdo"><img
+                    src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_700,dpr_1.0/v1/attachments/generic_asset/asset/089e3bb9352f90802ad07ad9f6a4a450-1599517407052/selling-proposition-still-1400-x1.png">
+            </div>
+        </div>
+        <div class="container-4">
+            <h1>You need it, we've got it</h1>
+            <div class="frst">
+                <div class="f1"><img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/graphics-design.91dfe44.svg">
+                    <p>Graphics & DesignGraphics & Design</p>
+                </div>
+                <div class="f1"><img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/online-marketing.a3e9794.svg">
+                    <p>Digital MarketingDigital Marketing</p>
+                </div>
+                <div class="f1">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/writing-translation.a787f2f.svg">
+                    <p>Writing & TranslationWriting & Translation</p>
+                </div>
+                <div class="f1">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/video-animation.1356999.svg">
+                    <p>AnimationVideo & Animation</p>
+                </div>
+                <div class="f1">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/music-audio.ede4c90.svg">
+                    <p> AudioMusic & Audio</p>
+                </div>
+            </div>
+
+
+            <div class="sec">
+                <div class="f2">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/programming.6ee5a90.svg">
+                    <p>Programming & TechProgramming & Tech</p>
+                </div>
+                <div class="f2">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/business.fabc3a7.svg">
+                    <p>BusinessBusiness</p>
+                </div>
+                <div class="f2">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/lifestyle.112b348.svg">
+                    <p>LifestyleLifestyle</p>
+
+                </div>
+                <div class="f2">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/data.855fe95.svg">
+                    <p>DataData</p>
+                </div>
+                <div class="f2">
+                    <img
+                        src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/photography.0cf5a3f.svg">
+                    <p>PhotographyPhotography</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-5">
+            <div class="logo"><svg width="89" height="27" viewBox="0 0 89 27" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g fill="#fff">
+                        <path
+                            d="m81.6 13.1h-3.1c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-13.4h-2.5c-2 0-3.1 1.5-3.1 4.1v9.3h-6v-18.4h6v2.8c1-2.2 2.3-2.8 4.3-2.8h7.3v2.8c1-2.2 2.3-2.8 4.3-2.8h2zm-25.2 5.6h-12.4c.3 2.1 1.6 3.2 3.7 3.2 1.6 0 2.7-.7 3.1-1.8l5.3 1.5c-1.3 3.2-4.5 5.1-8.4 5.1-6.5 0-9.5-5.1-9.5-9.5 0-4.3 2.6-9.4 9.1-9.4 6.9 0 9.2 5.2 9.2 9.1 0 .9 0 1.4-.1 1.8zm-5.7-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3 .8-3.4 3zm-22.9 11.3h5.2l6.6-18.3h-6l-3.2 10.7-3.2-10.8h-6zm-24.4 0h5.9v-13.4h5.7v13.4h5.9v-18.4h-11.6v-1.1c0-1.2.9-2 2.2-2h3.5v-5h-4.4c-4.3 0-7.2 2.7-7.2 6.6v1.5h-3.4v5h3.4z">
+                        </path>
+                    </g>
+                    <g fill="#1dbf73">
+                        <path d="m85.3 27c2 0 3.7-1.7 3.7-3.7s-1.7-3.7-3.7-3.7-3.7 1.7-3.7 3.7 1.7 3.7 3.7 3.7z"></path>
+                    </g>
+                </svg>
+                Business solution</div>
+            <div class="heading">
+                <h1>Advanced solutions and professional talent for businesses</h1>
+            </div>
+            <div class="head1z">
+                <h3>Fiverr Pro</h3>
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Access top freelancers and professional business tools for any project</p>
+            </div>
+            <div class="head1">
+                <h3>Fiverr Certified</h3>
+                <i class="fa-solid fa-circle-check"></i>Build your own branded marketplace of certified experts
+            </div>
+            <div class="head1">
+                <h3>Fiverr Enterprise</h3>
+                <i class="fa-solid fa-circle-check"></i>B <p>Manage your freelance workforce and onboard additional
+                    talent with an end-to-end SaaS solution</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+
+
+            $('.slider').slick({
+                dots: true,
+                arrows  : true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+</body>
+
+</html>
